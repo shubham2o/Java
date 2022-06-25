@@ -48,7 +48,7 @@ public class TypeCasting {
         1. All the byte short and character values are promoted to integer.
         2. If any one of the operands (*,/,etc.) is long then the whole operation will be promoted to long.
         3. If any one of the operands (*,/,etc.) is float then the whole operation will be promoted to float.
-        Example => (3 * 5.634567654f = 16.903704)
+        Example => (3 * 5.634567654f = 16.903704f)
         4. If any one of the operands (*,/,etc.) is double then the whole operation will be promoted to double.
         Example => (3 * 5.6 = 16.7999999999999997)
         */
