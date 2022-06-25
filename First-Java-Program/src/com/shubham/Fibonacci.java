@@ -8,7 +8,7 @@ public class Fibonacci {
         int n = in.nextInt();
 
         // 1st Approach
-        System.out.println("1st Approach");
+        System.out.println("A. 1st Approach");
         int a = 0;
         int b = 1;
         int count = 2;
@@ -22,7 +22,7 @@ public class Fibonacci {
         System.out.println(b);
 
         // 2nd Approach
-        System.out.println("2nd Approach");
+        System.out.println("B. 2nd Approach");
         int first = 1;
         int second = 1;
         int counter = 3;
