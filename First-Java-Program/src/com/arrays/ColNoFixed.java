@@ -22,7 +22,6 @@ public class ColNoFixed {
 //      OUTPUT - Second Approach (Arrays.toString())
         System.out.println("-> B. Second Approach");
         for (int row = 0; row < arr.length; row++) {
-
             System.out.println(Arrays.toString(arr[row]));
         }
 
