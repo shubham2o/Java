@@ -28,6 +28,6 @@ public class SmallestLetterWrapAround {
     Output: "c" */
 
     public static void main(String[] args) {
-
+        String[] letters = {"c", "f", "j"};
     }
 }
