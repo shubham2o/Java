@@ -65,6 +65,7 @@ public class CeilingNumber {
         }
 
         // but what if the target is greater than the greatest number in the array.
+
         if (target > arr[arr.length - 1]) {
             return -1;
         }
