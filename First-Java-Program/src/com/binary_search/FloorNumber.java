@@ -38,7 +38,7 @@ public class FloorNumber {
         }
 
         // but what if the target is lower than the lowest number in the array.
-        if (target < arr[arr.length-1]) {
+        if (target < arr[0]) {
             return -1;
         }
 
@@ -65,7 +65,7 @@ public class FloorNumber {
         }
 
         // but what if the target is lower than the lowest number in the array.
-        if (target < arr[arr.length-1]) {
+        if (target < arr[0]) {
             return -1;
         }
 
