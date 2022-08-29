@@ -1,12 +1,24 @@
 package com.binary_search;
 
-import java.util.Arrays;
-
 public class RotationCount {
+    /* Find the Rotation Count in Rotated Sorted array
+    Consider an array of distinct numbers sorted in increasing order. The array has been rotated (clockwise) k number of
+    times. Given such an array, find the value of k.
+
+    Example 1:
+    Input: arr[] = {15, 18, 2, 3, 6, 12}
+    Output: 2
+    Explanation: Initial array must be {2, 3, 6, 12, 15, 18}. We get the given array after rotating the initial array
+    twice.
+    */
     public static void main(String[] args) {
         // Example 1:
-        int[] arr = {4, 5, 6, 7, 0, 1, 2};
+        int[] arr = {15, 18, 2, 3, 6, 12};
         System.out.println(countRotations(arr));
+
+        // Example 2:
+        int[] arr2 = {4, 5, 6, 7, 0, 1, 2};
+        System.out.println(countRotations(arr2));
     }
 
     static int countRotations(int[] arr) {
