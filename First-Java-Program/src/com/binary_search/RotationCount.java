@@ -19,6 +19,18 @@ public class RotationCount {
         // Example 2:
         int[] arr2 = {4, 5, 6, 7, 0, 1, 2};
         System.out.println(countRotations(arr2));
+
+        // Example 3:
+        int[] arr3 = {90, 1, 2, 3, 4, 80};
+        System.out.println(countRotations(arr3));
+
+        // Example 4:
+        int[] arr4 = {1, 2, 3, 4, 5, 10, 0};
+        System.out.println(countRotations(arr4));
+
+        // Example 5:
+        int[] arr5 = {5, 10, 20, 30, 100};
+        System.out.println(countRotations(arr5));
     }
 
     static int countRotations(int[] arr) {
