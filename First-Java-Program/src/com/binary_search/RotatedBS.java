@@ -81,6 +81,24 @@ public class RotatedBS {
         System.out.print(", "+ Arrays.toString(arr7));
         int ans7 = search(arr7, target7);
         System.out.println(", Output = " + ans7);
+
+        // Example 8:
+        int[] arr8 = {1, 2, 3, 4, 5, 5, 6, 0};
+        System.out.print("• "+ Arrays.toString(arr8));
+        int ans8 = findPivotWithDuplicates(arr8);
+        System.out.println(", Output = " + ans8);
+
+        // Example 9:
+        int[] arr9 = {2, 2, 2, 2, 9, 2};
+        System.out.print("• "+ Arrays.toString(arr9));
+        int ans9 = findPivotWithDuplicates(arr9);
+        System.out.println(", Output = " + ans9);
+
+        // Example 10:
+        int[] arr10 = {9, 2, 2, 2, 9};
+        System.out.print("• "+ Arrays.toString(arr10));
+        int ans10 = findPivotWithDuplicates(arr10);
+        System.out.println(", Output = " + ans10);
     }
 
     static int search(int[] nums, int target) {
@@ -141,6 +159,48 @@ public class RotatedBS {
             // Case IV:
             else {
                 start = mid + 1;
+            }
+        }
+
+        return -1;
+    }
+
+    static int findPivotWithDuplicates(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (mid < end && arr[mid] > arr[mid + 1]) {
+                return mid;
+            }
+            if (mid > start && arr[mid] < arr[mid - 1]) {
+                return mid - 1;
+            }
+
+            // If elements at start, middle & end are equal then just skip the duplicates
+            if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
+                // Skip the duplicates
+                // NOTE: What if these elements at start and end were the pivot?
+                // Check if start is pivot
+                if (arr[start] > arr[start + 1]) {
+                    return start;
+                }
+                start++;
+
+                // Check if end is pivot
+                if (arr[end] < arr[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+            }
+
+            // Left side of the array is sorted, so pivot should be on the right side of the array
+            else if (arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end])) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
             }
         }
 
